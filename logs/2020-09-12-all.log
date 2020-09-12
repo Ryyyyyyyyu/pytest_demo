@@ -1,0 +1,243 @@
+2020-09-12 13:24:12,624 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行注册成功-带注册名用例的注册请求发送，请求入参{'mobile_phone': '13481707647', 'pwd': '12345678', 'type': 1, 'reg_name': '34254sdfs'}
+2020-09-12 13:24:12,661 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:12,780 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:12,782 -- [test_lemon.py-->line:98] - DEBUG: ----------注册成功-带注册名用例的注册请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16810, 'reg_name': '34254sdfs', 'mobile_phone': '13481707647'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:12,859 -- [test_lemon.py-->line:105] - DEBUG: ----------查询数据库SQL语句为:SELECT * FROM futureloan.member WHERE mobile_phone="13481707647";,返回结果{'id': 16810, 'reg_name': '34254sdfs', 'pwd': '25D55AD283AA400AF464C76D713C07AD', 'mobile_phone': '13481707647', 'type': 1, 'leave_amount': Decimal('0.00'), 'reg_time': datetime.datetime(2020, 9, 12, 13, 24, 12)}
+2020-09-12 13:24:12,859 -- [test_lemon.py-->line:107] - DEBUG: ----------注册成功-带注册名用例执行成功----------
+2020-09-12 13:24:13,049 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行成功-不带用户名用例的注册请求发送，请求入参{'mobile_phone': '13483794694', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,051 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,140 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,141 -- [test_lemon.py-->line:98] - DEBUG: ----------成功-不带用户名用例的注册请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16811, 'reg_name': '小柠檬', 'mobile_phone': '13483794694'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,217 -- [test_lemon.py-->line:105] - DEBUG: ----------查询数据库SQL语句为:SELECT * FROM futureloan.member WHERE mobile_phone="13483794694";,返回结果{'id': 16811, 'reg_name': '小柠檬', 'pwd': '25D55AD283AA400AF464C76D713C07AD', 'mobile_phone': '13483794694', 'type': 1, 'leave_amount': Decimal('0.00'), 'reg_time': datetime.datetime(2020, 9, 12, 13, 24, 13)}
+2020-09-12 13:24:13,218 -- [test_lemon.py-->line:107] - DEBUG: ----------成功-不带用户名用例执行成功----------
+2020-09-12 13:24:13,288 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行不输入手机号用例的注册请求发送，请求入参{'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,289 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,352 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,353 -- [test_lemon.py-->line:98] - DEBUG: ----------不输入手机号用例的注册请求出参{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,353 -- [test_lemon.py-->line:107] - DEBUG: ----------不输入手机号用例执行成功----------
+2020-09-12 13:24:13,430 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行手机号长度10位用例的注册请求发送，请求入参{'mobile_phone': '1550000000', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,431 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,502 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,502 -- [test_lemon.py-->line:98] - DEBUG: ----------手机号长度10位用例的注册请求出参{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,503 -- [test_lemon.py-->line:107] - DEBUG: ----------手机号长度10位用例执行成功----------
+2020-09-12 13:24:13,586 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行手机号长度12位用例的注册请求发送，请求入参{'mobile_phone': '155000000001', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,587 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,659 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,660 -- [test_lemon.py-->line:98] - DEBUG: ----------手机号长度12位用例的注册请求出参{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,660 -- [test_lemon.py-->line:107] - DEBUG: ----------手机号长度12位用例执行成功----------
+2020-09-12 13:24:13,733 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行手机号含有非法字符用例的注册请求发送，请求入参{'mobile_phone': '1550000000q', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,735 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,804 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,804 -- [test_lemon.py-->line:98] - DEBUG: ----------手机号含有非法字符用例的注册请求出参{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,805 -- [test_lemon.py-->line:107] - DEBUG: ----------手机号含有非法字符用例执行成功----------
+2020-09-12 13:24:13,884 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行已注册过的手机号用例的注册请求发送，请求入参{'mobile_phone': '15500000000', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:13,886 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:13,962 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:13,963 -- [test_lemon.py-->line:98] - DEBUG: ----------已注册过的手机号用例的注册请求出参{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:13,963 -- [test_lemon.py-->line:107] - DEBUG: ----------已注册过的手机号用例执行成功----------
+2020-09-12 13:24:14,049 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行密码7位用例的注册请求发送，请求入参{'mobile_phone': '15500056781', 'pwd': '1234567', 'type': 1}
+2020-09-12 13:24:14,052 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,130 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,130 -- [test_lemon.py-->line:98] - DEBUG: ----------密码7位用例的注册请求出参{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:14,131 -- [test_lemon.py-->line:107] - DEBUG: ----------密码7位用例执行成功----------
+2020-09-12 13:24:14,212 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行密码17位用例的注册请求发送，请求入参{'mobile_phone': '15500000001', 'pwd': '12345678901234567', 'type': 1}
+2020-09-12 13:24:14,213 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,281 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,282 -- [test_lemon.py-->line:98] - DEBUG: ----------密码17位用例的注册请求出参{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:14,282 -- [test_lemon.py-->line:107] - DEBUG: ----------密码17位用例执行成功----------
+2020-09-12 13:24:14,361 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行不输入密码用例的注册请求发送，请求入参{'mobile_phone': '13300000001', 'type': 1}
+2020-09-12 13:24:14,363 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,428 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,429 -- [test_lemon.py-->line:98] - DEBUG: ----------不输入密码用例的注册请求出参{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:14,429 -- [test_lemon.py-->line:107] - DEBUG: ----------不输入密码用例执行成功----------
+2020-09-12 13:24:14,503 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行注册名11位用例的注册请求发送，请求入参{'mobile_phone': '13303007856', 'pwd': '12345678', 'type': 1, 'reg_name': '12345678909991'}
+2020-09-12 13:24:14,504 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,568 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,569 -- [test_lemon.py-->line:98] - DEBUG: ----------注册名11位用例的注册请求出参{'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:14,569 -- [test_lemon.py-->line:107] - DEBUG: ----------注册名11位用例执行成功----------
+2020-09-12 13:24:14,646 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行类型输入非0，1内容用例的注册请求发送，请求入参{'mobile_phone': '13300003456', 'pwd': '12345678', 'type': 2}
+2020-09-12 13:24:14,647 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,715 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,716 -- [test_lemon.py-->line:98] - DEBUG: ----------类型输入非0，1内容用例的注册请求出参{'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:14,716 -- [test_lemon.py-->line:107] - DEBUG: ----------类型输入非0，1内容用例执行成功----------
+2020-09-12 13:24:14,870 -- [test_lemon.py-->line:93] - DEBUG: ----------开始执行不输入类型用例的注册请求发送，请求入参{'mobile_phone': '13469102583', 'pwd': '12345678'}
+2020-09-12 13:24:14,872 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:14,959 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:14,959 -- [test_lemon.py-->line:98] - DEBUG: ----------不输入类型用例的注册请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16812, 'reg_name': '小柠檬', 'mobile_phone': '13469102583'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:15,035 -- [test_lemon.py-->line:105] - DEBUG: ----------查询数据库SQL语句为:SELECT * FROM futureloan.member WHERE mobile_phone="13469102583";,返回结果{'id': 16812, 'reg_name': '小柠檬', 'pwd': '25D55AD283AA400AF464C76D713C07AD', 'mobile_phone': '13469102583', 'type': 1, 'leave_amount': Decimal('0.00'), 'reg_time': datetime.datetime(2020, 9, 12, 13, 24, 15)}
+2020-09-12 13:24:15,035 -- [test_lemon.py-->line:107] - DEBUG: ----------不输入类型用例执行成功----------
+2020-09-12 13:24:15,200 -- [test_lemon.py-->line:26] - DEBUG: ----------开始执行前置处理:注册请求发送，请求入参{'mobile_phone': '13433405184', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:15,203 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:15,290 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:15,291 -- [test_lemon.py-->line:31] - DEBUG: ----------前置处理:注册请求发送成功，请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16813, 'reg_name': '小柠檬', 'mobile_phone': '13433405184'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:15,366 -- [test_lemon.py-->line:37] - DEBUG: ----------查询数据库SQL语句为:select * from futureloan.member where mobile_phone = '13433405184';,返回结果{'id': 16813, 'reg_name': '小柠檬', 'pwd': '25D55AD283AA400AF464C76D713C07AD', 'mobile_phone': '13433405184', 'type': 1, 'leave_amount': Decimal('0.00'), 'reg_time': datetime.datetime(2020, 9, 12, 13, 24, 15)}
+2020-09-12 13:24:15,367 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行登录成功用例的登录请求发送，请求入参{'mobile_phone': '13433405184', 'pwd': '12345678'}
+2020-09-12 13:24:15,369 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:15,447 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:15,448 -- [test_lemon.py-->line:138] - DEBUG: ----------登录成功用例的登录请求出参{'mobile_phone': '13433405184', 'pwd': '12345678'}
+2020-09-12 13:24:15,448 -- [test_lemon.py-->line:142] - DEBUG: ----------登录成功用例执行成功----------
+2020-09-12 13:24:15,524 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行手机号为空用例的登录请求发送，请求入参{'pwd': '12345678'}
+2020-09-12 13:24:15,525 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:15,594 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:15,595 -- [test_lemon.py-->line:138] - DEBUG: ----------手机号为空用例的登录请求出参{'pwd': '12345678'}
+2020-09-12 13:24:15,595 -- [test_lemon.py-->line:142] - DEBUG: ----------手机号为空用例执行成功----------
+2020-09-12 13:24:15,671 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行密码为空用例的登录请求发送，请求入参{'mobile_phone': '15512345678'}
+2020-09-12 13:24:15,673 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:15,746 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:15,747 -- [test_lemon.py-->line:138] - DEBUG: ----------密码为空用例的登录请求出参{'mobile_phone': '15512345678'}
+2020-09-12 13:24:15,747 -- [test_lemon.py-->line:142] - DEBUG: ----------密码为空用例执行成功----------
+2020-09-12 13:24:15,822 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行手机号未注册用例的登录请求发送，请求入参{'mobile_phone': '15512345678', 'pwd': '1234566'}
+2020-09-12 13:24:15,824 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:15,903 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:15,903 -- [test_lemon.py-->line:138] - DEBUG: ----------手机号未注册用例的登录请求出参{'mobile_phone': '15512345678', 'pwd': '1234566'}
+2020-09-12 13:24:15,904 -- [test_lemon.py-->line:142] - DEBUG: ----------手机号未注册用例执行成功----------
+2020-09-12 13:24:15,979 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行密码错误用例的登录请求发送，请求入参{'mobile_phone': '15512345678', 'pwd': '1234567'}
+2020-09-12 13:24:15,980 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:16,062 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:16,063 -- [test_lemon.py-->line:138] - DEBUG: ----------密码错误用例的登录请求出参{'mobile_phone': '15512345678', 'pwd': '1234567'}
+2020-09-12 13:24:16,063 -- [test_lemon.py-->line:142] - DEBUG: ----------密码错误用例执行成功----------
+2020-09-12 13:24:16,139 -- [test_lemon.py-->line:133] - DEBUG: ----------开始执行手机号格式错误用例的登录请求发送，请求入参{'mobile_phone': '12345678912', 'pwd': '12345678'}
+2020-09-12 13:24:16,141 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:16,210 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:16,211 -- [test_lemon.py-->line:138] - DEBUG: ----------手机号格式错误用例的登录请求出参{'mobile_phone': '12345678912', 'pwd': '12345678'}
+2020-09-12 13:24:16,211 -- [test_lemon.py-->line:142] - DEBUG: ----------手机号格式错误用例执行成功----------
+2020-09-12 13:24:16,359 -- [test_lemon.py-->line:26] - DEBUG: ----------开始执行前置处理:注册请求发送，请求入参{'mobile_phone': '13431935422', 'pwd': '12345678', 'type': 1}
+2020-09-12 13:24:16,360 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:16,444 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/register HTTP/1.1" 200 None
+2020-09-12 13:24:16,444 -- [test_lemon.py-->line:31] - DEBUG: ----------前置处理:注册请求发送成功，请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16814, 'reg_name': '小柠檬', 'mobile_phone': '13431935422'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:16,521 -- [test_lemon.py-->line:37] - DEBUG: ----------查询数据库SQL语句为:select * from futureloan.member where mobile_phone = '13431935422';,返回结果{'id': 16814, 'reg_name': '小柠檬', 'pwd': '25D55AD283AA400AF464C76D713C07AD', 'mobile_phone': '13431935422', 'type': 1, 'leave_amount': Decimal('0.00'), 'reg_time': datetime.datetime(2020, 9, 12, 13, 24, 16)}
+2020-09-12 13:24:16,521 -- [test_lemon.py-->line:54] - DEBUG: ----------开始执行前置处理:登录请求发送，请求入参{'mobile_phone': '13431935422', 'pwd': '12345678'}
+2020-09-12 13:24:16,523 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:16,596 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/login HTTP/1.1" 200 None
+2020-09-12 13:24:16,596 -- [test_lemon.py-->line:59] - DEBUG: ----------前置处理:登录请求发送成功，请求出参{'code': 0, 'msg': 'OK', 'data': {'id': 16814, 'leave_amount': 0.0, 'mobile_phone': '13431935422', 'reg_name': '小柠檬', 'reg_time': '2020-09-12 13:24:16.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-09-12 13:29:16', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE2ODE0LCJleHAiOjE1OTk4ODg1NTZ9.2tYVQPKuSWrqtodBbI0yKNtWsDDUOQj9lF-q5QmiTytZvqeaFIdp5yhArjdoxFjDHLNxEUBuGeYjjPln5N7UIA'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-09-12 13:24:16,662 -- [test_lemon.py-->line:173] - DEBUG: ----------充值前查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('0.00')}
+2020-09-12 13:24:16,662 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值成功-整数用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 600}
+2020-09-12 13:24:16,664 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:16,747 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:16,747 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值成功-整数用例的充值请求出参{'member_id': 16814, 'amount': 600}
+2020-09-12 13:24:16,812 -- [test_lemon.py-->line:187] - DEBUG: ----------充值后查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('600.00')}
+2020-09-12 13:24:16,844 -- [test_lemon.py-->line:190] - DEBUG: ----------充值成功-整数用例执行成功----------
+2020-09-12 13:24:16,990 -- [test_lemon.py-->line:173] - DEBUG: ----------充值前查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('600.00')}
+2020-09-12 13:24:16,991 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值成功-1位小数用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 600.1}
+2020-09-12 13:24:16,992 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:17,078 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:17,079 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值成功-1位小数用例的充值请求出参{'member_id': 16814, 'amount': 600.1}
+2020-09-12 13:24:17,144 -- [test_lemon.py-->line:187] - DEBUG: ----------充值后查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('1200.10')}
+2020-09-12 13:24:17,145 -- [test_lemon.py-->line:190] - DEBUG: ----------充值成功-1位小数用例执行成功----------
+2020-09-12 13:24:17,283 -- [test_lemon.py-->line:173] - DEBUG: ----------充值前查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('1200.10')}
+2020-09-12 13:24:17,283 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值成功-2位小数用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 600.22}
+2020-09-12 13:24:17,285 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:17,363 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:17,364 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值成功-2位小数用例的充值请求出参{'member_id': 16814, 'amount': 600.22}
+2020-09-12 13:24:17,429 -- [test_lemon.py-->line:187] - DEBUG: ----------充值后查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('1800.32')}
+2020-09-12 13:24:17,429 -- [test_lemon.py-->line:190] - DEBUG: ----------充值成功-2位小数用例执行成功----------
+2020-09-12 13:24:17,574 -- [test_lemon.py-->line:173] - DEBUG: ----------充值前查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('1800.32')}
+2020-09-12 13:24:17,574 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值成功-50万用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 500000}
+2020-09-12 13:24:17,575 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:17,653 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:17,654 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值成功-50万用例的充值请求出参{'member_id': 16814, 'amount': 500000}
+2020-09-12 13:24:17,719 -- [test_lemon.py-->line:187] - DEBUG: ----------充值后查询数据库SQL语句为:SELECT leave_amount FROM futureloan.member WHERE id=16814;,返回结果{'leave_amount': Decimal('501800.32')}
+2020-09-12 13:24:17,719 -- [test_lemon.py-->line:190] - DEBUG: ----------充值成功-50万用例执行成功----------
+2020-09-12 13:24:17,797 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行会员id为空用例的充值请求发送，请求入参{'amount': 600}
+2020-09-12 13:24:17,798 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:17,865 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:17,865 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行会员id为空用例的充值请求出参{'amount': 600}
+2020-09-12 13:24:17,865 -- [test_lemon.py-->line:190] - DEBUG: ----------会员id为空用例执行成功----------
+2020-09-12 13:24:17,941 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行id不是当前登录的用户用例的充值请求发送，请求入参{'member_id': 98989898, 'amount': 600}
+2020-09-12 13:24:17,944 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,011 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,011 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行id不是当前登录的用户用例的充值请求出参{'member_id': 98989898, 'amount': 600}
+2020-09-12 13:24:18,011 -- [test_lemon.py-->line:190] - DEBUG: ----------id不是当前登录的用户用例执行成功----------
+2020-09-12 13:24:18,082 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行会员id为字符串用例的充值请求发送，请求入参{'member_id': '16814', 'amount': 600}
+2020-09-12 13:24:18,083 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,157 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,158 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行会员id为字符串用例的充值请求出参{'member_id': '16814', 'amount': 600}
+2020-09-12 13:24:18,158 -- [test_lemon.py-->line:194] - ERROR: ----------会员id为字符串用例执行失败----------
+2020-09-12 13:24:18,158 -- [test_lemon.py-->line:195] - ERROR: assert 0 == 2
+  +0
+  -2
+Traceback (most recent call last):
+  File "F:\pyCharm projects\pytest_demo\testcase\test_lemon.py", line 181, in test_recharge
+    assert res['code'] == expected['code']
+AssertionError: assert 0 == 2
+  +0
+  -2
+2020-09-12 13:24:18,321 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行会员id为小数用例的充值请求发送，请求入参{'member_id': 16814.0, 'amount': 600}
+2020-09-12 13:24:18,323 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,391 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,392 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行会员id为小数用例的充值请求出参{'member_id': 16814.0, 'amount': 600}
+2020-09-12 13:24:18,392 -- [test_lemon.py-->line:190] - DEBUG: ----------会员id为小数用例执行成功----------
+2020-09-12 13:24:18,471 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额为0用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 0}
+2020-09-12 13:24:18,473 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,551 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,552 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额为0用例的充值请求出参{'member_id': 16814, 'amount': 0}
+2020-09-12 13:24:18,552 -- [test_lemon.py-->line:194] - ERROR: ----------充值金额为0用例执行失败----------
+2020-09-12 13:24:18,553 -- [test_lemon.py-->line:195] - ERROR: assert 0 == 2
+  +0
+  -2
+Traceback (most recent call last):
+  File "F:\pyCharm projects\pytest_demo\testcase\test_lemon.py", line 181, in test_recharge
+    assert res['code'] == expected['code']
+AssertionError: assert 0 == 2
+  +0
+  -2
+2020-09-12 13:24:18,634 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额为负数用例的充值请求发送，请求入参{'member_id': 16814, 'amount': -600}
+2020-09-12 13:24:18,636 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,705 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,706 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额为负数用例的充值请求出参{'member_id': 16814, 'amount': -600}
+2020-09-12 13:24:18,706 -- [test_lemon.py-->line:190] - DEBUG: ----------充值金额为负数用例执行成功----------
+2020-09-12 13:24:18,789 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额为空用例的充值请求发送，请求入参{'member_id': 16814}
+2020-09-12 13:24:18,790 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:18,854 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:18,854 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额为空用例的充值请求出参{'member_id': 16814}
+2020-09-12 13:24:18,855 -- [test_lemon.py-->line:194] - ERROR: ----------充值金额为空用例执行失败----------
+2020-09-12 13:24:18,855 -- [test_lemon.py-->line:195] - ERROR: assert 2 == 1
+  +2
+  -1
+Traceback (most recent call last):
+  File "F:\pyCharm projects\pytest_demo\testcase\test_lemon.py", line 181, in test_recharge
+    assert res['code'] == expected['code']
+AssertionError: assert 2 == 1
+  +2
+  -1
+2020-09-12 13:24:18,950 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额-3位小数用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 600.222}
+2020-09-12 13:24:18,951 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:19,022 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:19,023 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额-3位小数用例的充值请求出参{'member_id': 16814, 'amount': 600.222}
+2020-09-12 13:24:19,023 -- [test_lemon.py-->line:194] - ERROR: ----------充值金额-3位小数用例执行失败----------
+2020-09-12 13:24:19,023 -- [test_lemon.py-->line:195] - ERROR: assert '余额小数超过两位' == '金额小数超过两位'
+  - 金额小数超过两位
+  ? ^
+  + 余额小数超过两位
+  ? ^
+Traceback (most recent call last):
+  File "F:\pyCharm projects\pytest_demo\testcase\test_lemon.py", line 182, in test_recharge
+    assert res['msg'] == expected['msg']
+AssertionError: assert '余额小数超过两位' == '金额小数超过两位'
+  - 金额小数超过两位
+  ? ^
+  + 余额小数超过两位
+  ? ^
+2020-09-12 13:24:19,169 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额-大于50万用例的充值请求发送，请求入参{'member_id': 16814, 'amount': 500001}
+2020-09-12 13:24:19,171 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:19,238 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:19,238 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额-大于50万用例的充值请求出参{'member_id': 16814, 'amount': 500001}
+2020-09-12 13:24:19,238 -- [test_lemon.py-->line:194] - ERROR: ----------充值金额-大于50万用例执行失败----------
+2020-09-12 13:24:19,239 -- [test_lemon.py-->line:195] - ERROR: assert '余额必须大于0并且小于或者等于500000' == '金额必须大于0并且小于或者等于500000'
+  - 金额必须大于0并且小于或者等于500000
+  ? ^
+  + 余额必须大于0并且小于或者等于500000
+  ? ^
+Traceback (most recent call last):
+  File "F:\pyCharm projects\pytest_demo\testcase\test_lemon.py", line 182, in test_recharge
+    assert res['msg'] == expected['msg']
+AssertionError: assert '余额必须大于0并且小于或者等于500000' == '金额必须大于0并且小于或者等于500000'
+  - 金额必须大于0并且小于或者等于500000
+  ? ^
+  + 余额必须大于0并且小于或者等于500000
+  ? ^
+2020-09-12 13:24:19,320 -- [test_lemon.py-->line:174] - DEBUG: ----------开始执行充值金额-非数字用例的充值请求发送，请求入参{'member_id': 16814, 'amount': '5万'}
+2020-09-12 13:24:19,322 -- [connectionpool.py-->line:225] - DEBUG: Starting new HTTP connection (1): api.lemonban.com:80
+2020-09-12 13:24:19,394 -- [connectionpool.py-->line:437] - DEBUG: http://api.lemonban.com:80 "POST /futureloan/member/recharge HTTP/1.1" 200 None
+2020-09-12 13:24:19,395 -- [test_lemon.py-->line:179] - DEBUG: ----------开始执行充值金额-非数字用例的充值请求出参{'member_id': 16814, 'amount': '5万'}
+2020-09-12 13:24:19,395 -- [test_lemon.py-->line:190] - DEBUG: ----------充值金额-非数字用例执行成功----------
